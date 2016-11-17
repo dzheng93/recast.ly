@@ -15,14 +15,13 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      done: false
+      currentSong: exampleVideoData[2]
     };
   }
 
-  handleClick: function() {
+  onVideoListClick (video) {
     this.setState({
-      done: !this.state.done
-    console.log('yo');
+      currentSong: video
     });
   }
 
@@ -32,10 +31,10 @@ class App extends React.Component {
   <div>
     <Nav />
     <div className="col-md-7">
-      <VideoPlayer video={exampleVideoData[2]} />
+      <VideoPlayer video={this.state.currentSong} />
     </div>
     <div className="col-md-5">
-      <VideoList onClick={this.onVideoListClick.bind(this)} videos={exampleVideoData} />
+      <VideoList onVideoListClick={this.onVideoListClick.bind(this)} videos={exampleVideoData} />
     </div>
     </div>
     );

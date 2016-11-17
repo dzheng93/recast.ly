@@ -3,11 +3,13 @@ var VideoListEntry = (props) => ( //change this to be react
 //some sort of for each or iteration through props
   <div className="video-list-entry">
     <div className="media-left media-middle">
-      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" onClick={console.log('yo')}/>
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt=""/>
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title" onClick={console.log('yo')}>{props.video.snippet.title}</div>
-      <div className="video-list-entry-detail" onClick={console.log('yo')}>{props.video.snippet.description}</div>
+      <div className="video-list-entry-title" onClick={function() {
+        props.onVideoListClick(props.video);
+      }}>{props.video.snippet.title}</div>
+      <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>
   </div>
 );
