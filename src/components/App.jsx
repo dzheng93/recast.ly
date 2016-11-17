@@ -13,17 +13,29 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      done: false
+    };
   }
+
+  handleClick: function() {
+    this.setState({
+      done: !this.state.done
+    console.log('yo');
+    });
+  }
+
 
   render() {
     return (
   <div>
     <Nav />
     <div className="col-md-7">
-      <VideoPlayer video={exampleVideoData[1]} />
+      <VideoPlayer video={exampleVideoData[2]} />
     </div>
     <div className="col-md-5">
-      <VideoList videos={exampleVideoData} />
+      <VideoList onClick={this.onVideoListClick.bind(this)} videos={exampleVideoData} />
     </div>
     </div>
     );
