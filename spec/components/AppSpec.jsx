@@ -7,7 +7,7 @@ describe('App', function() {
   } = React.addons.TestUtils;
 
   var app;
-  debugger;
+ 
   beforeEach(function() {
     app = renderIntoDocument(
       <App searchYouTube={() => {}}/>

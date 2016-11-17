@@ -1,19 +1,17 @@
 var VideoPlayer = (props) => {
   var videoURL = 'https://www.youtube.com/embed/' + props.video.id.videoId; 
   debugger;
-  render() {
-    return (
-    <div className="video-player">
-      <div className="embed-responsive embed-responsive-16by9">
-        <iframe className="embed-responsive-item" src={videoURL} allowFullScreen></iframe>
-      </div>
-      <div className="video-player-details">
-        <h3>{props.video.snippet.title}</h3>
-        <div>{props.video.snippet.description}</div>
-      </div>
+  return (
+  <div className="video-player">
+    <div className="embed-responsive embed-responsive-16by9">
+      <iframe className="embed-responsive-item" src={videoURL} allowFullScreen></iframe>
     </div>
-    );
-  }
+    <div className="video-player-details">
+      <h3>{props.video.snippet.title}</h3>
+      <div>{props.video.snippet.description}</div>
+    </div>
+  </div>
+  );
 };
 
 // PropTypes tell other developers what `props` a component expects
