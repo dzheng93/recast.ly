@@ -20,10 +20,10 @@ class App extends React.Component {
   <div>
     <Nav />
     <div className="col-md-7">
-      <VideoPlayer video={exampleVideoData[0]}/>
+      <VideoPlayer video={exampleVideoData[1]} />
     </div>
     <div className="col-md-5">
-      <VideoList videos={exampleVideoData}/>
+      <VideoList videos={exampleVideoData} />
     </div>
     </div>
     );
