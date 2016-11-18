@@ -34,13 +34,14 @@ class App extends React.Component {
 
 
     this.state = {
-      currentVid: null,
-      currentList: null
+      currentVid: exampleVideoData[0],
+      currentList: exampleVideoData,
+      searchText: 'chatterbox'
     };
 
     this.options = {
       key: window.YOUTUBE_API_KEY,
-      query: 'Crash compilation',
+      query: this.state.searchText,
       max: 8
     };
 
@@ -53,6 +54,15 @@ class App extends React.Component {
     });
   }
 
+  handleSearchQuery(query) {
+    this.props.searchYouTube({
+      key: window.YOUTUBE_API_KEY,
+      query: query,
+      max: 8
+    }, this.callback.bind(this));
+  }
+
+
   componentDidMount() {
     this.props.searchYouTube(this.options, this.callback.bind(this));
   }
@@ -64,10 +74,9 @@ class App extends React.Component {
   }
   // console.log('this.state.curentvid', this.state.currentVid);
   render() {
-    if (this.state.currentVid) {
-      return (
+    return (
   <div>
-    <Nav />
+    <Nav handleSearch={this.handleSearchQuery.bind(this)} />
     <div className="col-md-7">
       <VideoPlayer video={this.state.currentVid} />
     </div>
@@ -76,13 +85,6 @@ class App extends React.Component {
     </div>
     </div>
     );
-    } else {
-      return (
-        <div>
-        GG
-        </div>
-      );
-    } 
   }
 }
 

@@ -16,54 +16,54 @@ window.exampleVideoData = [{
     thumbnails: {
       default: {
         url: '',
-        width: 120,
-        height: 90
+        width: 0,
+        height: 0
       },
       medium: {
         url: '',
-        width: 320,
-        height: 180
+        width: 0,
+        height: 0
       },
       high: {
         url: '',
-        width: 480,
-        height: 360
+        width: 0,
+        height: 0
       }
     },
     channelTitle: '',
     liveBroadcastContent: ''
   }
 }, {
-  kind: 'youtube#searchResult',
-  etag: 'abQHWywil_AkNqdqji7_FqiK-u4/tS3xe6KXEJbntCAmn01SmEuSYxg',
+  kind: '',
+  etag: '',
   id: {
-    kind: 'youtube#video',
-    videoId: 'mFEoarLnnqM'
+    kind: '',
+    videoId: ''
   },
   snippet: {
-    publishedAt: '2014-08-08T21:31:58.000Z',
-    channelId: 'UCKKQaFUwyPb6iC-42rFRz2Q',
-    title: 'Thinking in React, a step by step screencast tutorial',
-    description: 'A step by step video tutorial that takes you through the correct way of coding Facebook React views. Check out the rest of the tagtree library: http://tagtree.tv.',
+    publishedAt: '',
+    channelId: '',
+    title: '',
+    description: '',
     thumbnails: {
       default: {
-        url: 'https://i.ytimg.com/vi/mFEoarLnnqM/default.jpg',
-        width: 120,
-        height: 90
+        url: '',
+        width: 0,
+        height: 0
       },
       medium: {
-        url: 'https://i.ytimg.com/vi/mFEoarLnnqM/mqdefault.jpg',
-        width: 320,
-        height: 180
+        url: '',
+        width: 0,
+        height: 0
       },
       high: {
-        url: 'https://i.ytimg.com/vi/mFEoarLnnqM/hqdefault.jpg',
-        width: 480,
-        height: 360
+        url: '',
+        width: 0,
+        height: 0
       }
     },
     channelTitle: '',
-    liveBroadcastContent: 'none'
+    liveBroadcastContent: ''
   }
 }, {
   kind: 'youtube#searchResult',
