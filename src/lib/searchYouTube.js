@@ -15,7 +15,6 @@ var searchYouTube = (options, callback) => {
     success: function (data) {
       console.log('successful query data:', data);
       callback(data.items);
-      // ReactDOM.render(<App />, document.getElementById('app'));
     },
     error: function (data) {
       // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
@@ -25,25 +24,6 @@ var searchYouTube = (options, callback) => {
 };  
 
 window.searchYouTube = searchYouTube;
-
-
-// window.searchRes = {
-//   key: window.YOUTUBE_API_KEY,
-//   q: 'bike',
-//   type: 'video',
-//   videoEmbeddable: 'true',
-//   maxResults: 8,
-//   part: 'snippet',
-// };
-
-// window.resultData = [];
-// window.importer = function(data) {
-//   window.resultData = data;
-// console.log('resultdata is', resultData);
-// };
-
-
-// searchYouTube(searchRes, importer);
 
 
 

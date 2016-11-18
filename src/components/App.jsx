@@ -1,33 +1,3 @@
-// var App = (props) => (
-//   <div>
-//     <Nav />
-//     <div className="col-md-7">
-//       <VideoPlayer/>
-//     </div>
-//     <div className="col-md-5">
-//       <VideoList/>
-//     </div>
-//   </div>
-// );
-
-// var searchRes = {
-//   key: window.YOUTUBE_API_KEY,
-//   q: 'Car crash complilation',
-//   maxResults: '5',
-//   part: 'snippet',
-//   videoEmbeddable: 'true',
-//   type: 'video'
-// };
-
-// var resultData = [];
-// var importer = function(data) {
-//   resultData.push(data);
-// };
-
-// searchYouTube(searchRes, importer);
-
-// console.log(resultData);
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -72,7 +42,7 @@ class App extends React.Component {
       currentVid: video
     });
   }
-  // console.log('this.state.curentvid', this.state.currentVid);
+  
   render() {
     return (
   <div>
@@ -92,4 +62,4 @@ class App extends React.Component {
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
-// window.App = App;
+window.App = App;
